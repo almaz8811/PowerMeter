@@ -1,1 +1,2 @@
 # PowerMeter
+Проверка GIT
