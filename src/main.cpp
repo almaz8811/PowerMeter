@@ -1,9 +1,18 @@
-#include <Arduino.h>
+#include <DNSServer.h>
+#include <ESP8266WebServer.h>
+#include "Blynk_init.h"
+#include "Display.h"
+//extern void display_init();
 
-void setup() {
-  // put your setup code here, to run once:
+void setup()
+{
+   Serial.begin(9600);
+   Serial.println();
+   display_init();
+   blynk_init();   
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
+void loop()
+{
+   Blynk.run();
 }
